@@ -4,12 +4,16 @@ class Solution:
     #Complete this function
     def printNos(self,n):
         #Your code here
-        if n == 0:
-            return
+        c = 1
+        def recur(n ,c):
+            if n == 0:
+                return 
+            
+            print(c, end = " ")
 
-        self.printNos(n - 1)
-        print(n, end = " ")
-
+            recur(n - 1 , c + 1)
+        
+        recur(n,c)        
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
